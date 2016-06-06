@@ -8,4 +8,15 @@
       </h1>
     </section>
   </aside>
+  
+  <div class="col-md-8">
+    <% if @user.links.any? %>
+      <h3>Links (<%= @user.links.count %>)</h3>
+      <ul class="links">
+        <%= render @links %>
+      </ul>
+      <%= will_paginate @links %>
+    <% end %>
+    <%= link_to "New Link", "/links/new", class: "btn" %>
+  </div>
 </div>

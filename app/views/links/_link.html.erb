@@ -1,0 +1,7 @@
+<li id="link-<%= link.id %>">
+  <span class="url"><%= link.url %></span>
+  <span class="review"><%= link.review %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(link.created_at) %> ago.
+  </span>
+</li>
